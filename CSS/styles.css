@@ -1,0 +1,252 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: 'Plus Jakarta Sans', sans-serif;
+  }
+  
+  body {
+    display: flex;
+    height: 100vh;
+    font-size: 16px;
+    font-family: 'Plus Jakarta Sans', sans-serif;
+    box-shadow: inset 0 0 10px rgba(0, 0, 0, 0.5); /* Sombra para o corpo */
+    background-color: #121212; /* Preto sólido */
+    color: #e0e0e0; /* Cinza claro para contraste */
+  }
+  
+  .left-container {
+    width: 30%; /* Reduz a largura da parte esquerda */
+    background-color: #000000;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    padding: 2rem;
+    color: #e0e0e0; /* Texto cinza claro */
+    text-align: center;
+    background: linear-gradient(900deg, #000000, #2a0000); /* Gradiente preto e vermelho escuro */
+    height: 100vh;
+    padding: 20px;
+    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.5); /* Sombra para o container esquerdo */
+  }
+  
+  .left-container h1 {
+    font-size: 2.5rem;
+    margin-top: 1rem;
+    font-weight: 600;
+    text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.7); /* Sombra para o título */
+  }
+  
+  .img-logo {
+    filter: brightness(0) invert(1); /* Mantém a cor branca */
+    max-width: 150px; /* Define um tamanho adequado para a logo */
+    height: auto;
+  }
+  
+  .img-logo:hover {
+    transform: scale(1.2);
+    transition: transform 0.3s ease-in-out;
+  }
+  
+  .right-container {
+    width: 70%; /* Aumenta a largura da parte direita */
+    background-color: #1a1a1a; /* Preto sólido */
+    background-image: linear-gradient(rgba(0, 0, 0, 0.9), rgba(0, 0, 0, 0.7)), url('../IMG/binarios.jpg'); /* Sobreposição escura */
+    background-size: cover;
+    background-position: center;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    padding: 2rem;
+    box-shadow: inset 0 0 10px #660000; /* Sombra interna vermelho escuro */
+  }
+  
+  .right-container h2,
+  .right-container p {
+    color: white; /* Garante que o texto seja branco */
+  }
+  
+  form {
+    width: 100%;
+    max-width: 400px;
+    background-color: #1f1f1f; /* Preto sólido */
+    padding: 2rem;
+    border-radius: 12px;
+    box-shadow: 0 8px 20px rgba(102, 0, 0, 0.6); /* Sombra vermelho escuro */
+    backdrop-filter: blur(5px); /* Efeito de desfoque */
+  }
+  
+  form label {
+    display: block;
+    margin-bottom: 6px;
+    color: white; /* Define o texto como branco */
+    font-weight: 600; /* Texto mais destacado */
+  }
+  
+  form input,
+  form select {
+    width: 100%; /* Garante que a largura seja 100% do container */
+    max-width: 100%; /* Impede que ultrapasse o limite do container */
+    padding: 10px 12px;
+    margin-bottom: 1rem;
+    border: none;
+    border-radius: 6px;
+    background-color: rgba(58, 58, 58, 0.9); /* Fundo semitransparente */
+    color: white; /* Define o texto como branco */
+    font-size: 1rem;
+    box-shadow: 0 0 4px rgba(0, 0, 0, 0.5); /* Efeito ao redor da borda */
+  }
+  
+  form input:hover, form select:hover {
+    transition: box-shadow 0.3s ease-in-out;
+    box-shadow: 0 0 8px rgba(255, 0, 0, 0.8); /* Realce ao passar o mouse */
+  }
+  
+  form button {
+    width: 100%;
+    padding: 12px;
+    background-color: #990000; /* Vermelho sólido */
+    color: white; /* Define o texto como branco */
+    border: none;
+    border-radius: 8px;
+    font-weight: bold;
+    font-size: 1rem;
+    cursor: pointer;
+    transition: background-color 0.3s, transform 0.2s;
+  }
+  
+  form button:hover {
+    background-color: #800000; /* Vermelho mais escuro ao passar o mouse */
+    transform: scale(1.05); /* Efeito de zoom ao passar o mouse */
+  }
+  
+  form button:active {
+    animation: buttonPress 0.1s ease-in-out;
+  }
+  
+  .resultado-box {
+    align-items: center;
+    margin-top: 20px;
+    padding: 16px;
+    width: 100%;
+    max-width: 400px;
+    background-color: #1f1f1f; /* Preto sólido */
+    border-left: 5px solid #990000; /* Borda vermelho sólido */
+    color: white; /* Define o texto como branco */
+    font-size: 18px;
+    border-radius: 8px;
+    box-shadow: 0 4px 12px rgba(0, 0, 0, 0.6); /* Sombra mais visível para o resultado */
+    word-wrap: break-word;
+    backdrop-filter: blur(5px); /* Efeito de desfoque */
+  }
+  
+  .hidden {
+    display: none;
+  }
+  
+  h1 {
+    font-family: 'Plus Jakarta Sans', sans-serif;
+    font-size: 2.5rem;
+    margin-top: 20px;
+    color: white;
+    text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.5);
+  }
+  
+  .slogan {
+    font-family: 'Arial', sans-serif;
+    font-size: 1.2rem;
+    color: white;
+    margin-top: 10px;
+    text-align: center;
+  }
+  
+  @media (max-width: 768px) {
+    body {
+      flex-direction: column;
+      overflow-x: hidden; /* Evita rolagem horizontal */
+    }
+  
+    .left-container,
+    .right-container {
+      width: 100%;
+      height: auto;
+      padding: 1rem;
+    }
+  
+    .right-container {
+      margin-top: 20px;
+    }
+  
+    form {
+      width: 90%;
+      max-width: 100%;
+      margin: 0 auto; /* Centraliza o formulário */
+    }
+  
+    .resultado-box {
+      width: 90%;
+      max-width: 100%;
+      margin: 0 auto; /* Centraliza o resultado */
+    }
+
+    .img-logo {
+      max-width: 100px; /* Reduz o tamanho da logo em telas menores */
+      margin-bottom: 20px; /* Adiciona espaçamento abaixo da logo */
+    }
+
+    form input,
+    form select {
+      width: 90%; /* Reduz a largura em telas menores */
+      margin: 0 auto; /* Centraliza a caixa de texto */
+    }
+  }
+  
+  /* Animação de entrada para os containers */
+  @keyframes fadeIn {
+    from {
+      opacity: 0;
+      transform: translateY(20px);
+    }
+    to {
+      opacity: 1;
+      transform: translateY(0);
+    }
+  }
+  
+  /* Animação de interação para botões */
+  @keyframes buttonPress {
+    from {
+      transform: scale(1);
+    }
+    to {
+      transform: scale(0.95);
+    }
+  }
+  
+  /* Nova animação de fade-in com transição de preto para visível */
+  @keyframes fadeInBlack {
+    from {
+      opacity: 0;
+      background-color: black; /* Começa com fundo preto */
+    }
+    to {
+      opacity: 1;
+      background-color: transparent; /* Transição para o fundo original */
+    }
+  }
+  
+  /* Aplicar a nova animação de entrada */
+  .left-container, .right-container {
+    animation: fadeInBlack 1.5s ease-in-out;
+  }
+
+  #novaConta {
+    transition: background-color 0.3s, transform 0.2s;
+  }
+  
+  #novaConta:hover {
+    background-color: #800000; /* Vermelho mais escuro ao passar o mouse */
+    transform: scale(1.05); /* Efeito de zoom ao passar o mouse */
+  }

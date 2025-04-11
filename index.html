@@ -1,0 +1,71 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <link rel="stylesheet" href="CSS/styles.css" />
+  <script src="JS/script.js" defer></script>
+  <link href="https://fonts.googleapis.com/css2?family=Plus+Jakarta+Sans:wght@300;400;500;700&display=swap" rel="stylesheet">
+  <title>Converse</title>
+</head>
+<body>
+  <div class="left-container">
+    <div class="Logo">
+      <header>
+        <img class="img-logo" src="IMG/Logo.png" alt="Logo" />
+      </header>
+    </div>
+    
+    
+    <div class="about-section" style="padding: 1.5rem; background-color: rgba(33, 7, 7, 0.8); border-radius: 12px; box-shadow: 0 4px 8px rgba(102, 0, 0, 0.6); text-align: left;">
+      <h2 style="color: #e0e0e0; font-size: 1.8rem; margin-bottom: 1rem;">🔍 Sobre o Converse</h2>
+      <p style="color: #e0e0e0; line-height: 1.6; margin-bottom: 1rem;">
+        Converse é uma ferramenta prática para converter números entre bases: Binário, Decimal, Hexadecimal e Octal.
+      </p>
+      <h3 style="color: #e0e0e0; font-size: 1.5rem; margin-bottom: 0.5rem;">💡 Como funciona?</h3>
+      <ol style="color: #e0e0e0; line-height: 1.6; margin-left: 1.5rem; margin-bottom: 1rem;">
+        <li>Escolha a base de origem e destino.</li>
+        <li>Digite o número.</li>
+        <li>Clique em "Converter" para ver o resultado.</li>
+      </ol>
+      <h3 style="color: #e0e0e0; font-size: 1.5rem; margin-bottom: 0.5rem;">📌 Exemplo:</h3>
+      <p style="color: #e0e0e0; line-height: 1.6;">
+        Converta "1010" de Binário para Decimal e obtenha "10".
+      </p>
+    </div>
+  </div>
+
+  <div class="right-container">
+    <h2 style="text-shadow: 8px 8px 16px rgba(0, 0, 0, 1); margin-bottom: 20px;">Conversor de Números</h2>
+    <p style="text-shadow: 7px 7px 14px rgba(0, 0, 0, 1); margin-bottom: 20px;">Selecione qual operação deseja realizar:</p>
+    <form id="converterForm" style="width: 80%; max-width: 400px; margin-bottom: 20px;">
+      <label for="fromBase">Converter de:</label>
+      <select id="fromBase">
+        <option value="">Selecione</option>
+        <option value="2">Binário</option>
+        <option value="10">Decimal</option>
+        <option value="16">Hexadecimal</option>
+        <option value="8">Octal</option>
+      </select>
+
+      <label for="toBase">Para:</label>
+      <select id="toBase">
+        <option value="">Selecione</option>
+        <option value="2">Binário</option>
+        <option value="10">Decimal</option>
+        <option value="16">Hexadecimal</option>
+        <option value="8">Octal</option>
+      </select>
+
+      <div id="inputSection" class="hidden" style="margin-top: 20px;">
+        <label for="inputNumber">Digite um número:</label>
+        <input type="text" id="inputNumber" required />
+        <button type="submit" style="margin-top: 10px;">Converter</button>
+        <button id="novaConta" style="display: none; margin-top: 10px; padding: 12px; background-color: #990000; color: white; border: none; border-radius: 8px; font-weight: bold; font-size: 1rem; cursor: pointer;">Reiniciar</button>
+      </div>
+    </form>
+
+    <div id="resultado" class="resultado-box"></div>
+  </div>
+</body>
+</html>
